@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore personagens do universo Rick and Morty usando dados de uma API pública.">
+  <title>Rick & Morty Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Rick and Morty Explorer - início">
+      <span class="brand-mark">R<span>✦</span></span>
+      <span>RICK <b>&</b> MORTY <small>EXPLORER</small></span>
+    </a>
+    <a class="top-link" href="#personagens">Explorar personagens <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="pulse"></span> ARQUIVO INTERDIMENSIONAL</p>
+        <h1>O multiverso<br>está <em>na sua tela.</em></h1>
+        <p class="hero-text">Conheça personagens, descubra de onde vieram e explore os dados do universo de Rick and Morty em uma experiência conectada à API.</p>
+        <a class="primary-button" href="#personagens">Ver personagens <span>↓</span></a>
+        <div class="hero-note"><span>●</span> Dados carregados diretamente da API pública</div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração temática de Rick and Morty">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="planet planet-green"></div><div class="planet planet-purple"></div>
+        <div class="portal"><div class="portal-inner"></div><span>R&M</span></div>
+        <span class="star star-one">✦</span><span class="star star-two">✧</span>
+        <span class="art-label">DIMENSION C-137</span>
+      </div>
+    </section>
+
+    <section class="characters-section" id="personagens">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BANCO DE DADOS</p>
+          <h2>Personagens <em>encontrados</em></h2>
+          <p class="section-description">Os cards abaixo são criados automaticamente com as informações recebidas da API.</p>
+        </div>
+        <div class="counter"><strong id="total-count">—</strong><span>na página</span></div>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box">
+          <span>⌕</span>
+          <input type="search" id="search-input" placeholder="Buscar personagem..." aria-label="Buscar personagem pelo nome">
+        </label>
+        <select id="status-filter" aria-label="Filtrar por status">
+          <option value="">Todos os status</option>
+          <option value="Alive">Vivo</option>
+          <option value="Dead">Morto</option>
+          <option value="unknown">Desconhecido</option>
+        </select>
+        <button id="favorites-toggle" class="filter-button" type="button" aria-pressed="false">♡ Favoritos</button>
+      </div>
+
+      <p class="feedback" id="feedback" role="status">Conectando ao multiverso...</p>
+      <div class="character-grid" id="character-grid" aria-live="polite"></div>
+      <div class="pagination">
+        <button id="prev-button" class="page-button" type="button" disabled>← Anterior</button>
+        <span id="page-label">Página 1</span>
+        <button id="next-button" class="page-button" type="button">Próxima →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#"><span class="brand-mark">R<span>✦</span></span><span>RICK <b>&</b> MORTY <small>EXPLORER</small></span></a>
+    <p>Projeto acadêmico • Dados: Rick and Morty API</p>
+    <a href="https://rickandmortyapi.com/documentation" target="_blank" rel="noopener noreferrer">Documentação da API ↗</a>
+  </footer>
+</body>
+</html>
